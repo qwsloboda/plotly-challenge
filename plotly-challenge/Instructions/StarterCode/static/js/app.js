@@ -2,6 +2,7 @@ function buildMetadata(sample) {
     d3.json("samples.json").then((data) => {
       let metadata = data.metadata;
     });
+    d3.select("#sample-metadata").html("");
 };
 
 let sample = data.sample;
@@ -29,15 +30,15 @@ function updatePlotly() {
     let x = [];
     let y = [];
   
-    if (dataset === 'dataset1') {
-      x = [1, 2, 3, 4, 5];
-      y = [1, 2, 4, 8, 16];
-    }
+    //if (dataset === 'dataset1') {
+      //x = [1, 2, 3, 4, 5];
+      //y = [1, 2, 4, 8, 16];
+    //}
   
-    if (dataset === 'dataset2') {
-      x = [10, 20, 30, 40, 50];
-      y = [1, 10, 100, 1000, 10000];
-    }
+    //if (dataset === 'dataset2') {
+      //x = [10, 20, 30, 40, 50];
+      //y = [1, 10, 100, 1000, 10000];
+    //}
   
     Plotly.restyle("plot", "x", [x]);
     Plotly.restyle("plot", "y", [y]);
